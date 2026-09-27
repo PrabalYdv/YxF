@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Young &amp; Freaks — Patiala Run Club</title>
+  <meta name="description" content="Young & Freaks — a run club, but more than just running. Fitness, art, creativity, healing and human connection in Patiala." />
+  <meta property="og:title" content="Young & Freaks — Patiala Run Club" />
+  <meta property="og:description" content="For people who don't really fit into boxes." />
+  <meta property="og:image" content="assets/runs/Ddn9eM3Mc3y.jpg" />
+  <meta name="theme-color" content="#0e0d0b" />
+  <link rel="icon" href="assets/logo.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ LOADER: race start ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__lanes"><span></span><span></span><span></span><span></span><span></span></div>
+    <p class="loader__call" id="loaderCall">On your marks</p>
+    <p class="loader__clock"><span id="loaderClock">00:00.00</span></p>
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <a href="#top" class="nav__brand" aria-label="Young & Freaks home">
+      <img src="assets/logo.jpg" alt="" width="40" height="40" />
+      <span>Young<i>&amp;</i>Freaks</span>
+    </a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#route">The Route</a>
+      <a href="#runs">Runs</a>
+      <a href="#reels">Reels</a>
+    </nav>
+    <a class="btn btn--pill" href="https://www.instagram.com/youngxfreaks/" target="_blank" rel="noopener" data-cursor="DM us">Join the run <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <canvas id="scene" class="hero__canvas" aria-hidden="true"></canvas>
+
+      <div class="hero__meta hero__meta--tl mono">
+        <span>Patiala, PB</span>
+        <span>30.34°N · 76.39°E</span>
+      </div>
+      <div class="hero__meta hero__meta--tr mono">
+        <span>Run club / art club / weird club</span>
+        <span class="live"><i></i> 3 runs down · next one on IG</span>
+      </div>
+
+      <h1 class="hero__title" aria-label="Young and Freaks">
+        <span class="line"><span class="split">YOUNG</span></span>
+        <span class="line line--amp"><em class="serif">&amp;</em></span>
+        <span class="line"><span class="split">FREAKS</span></span>
+      </h1>
+
+      <div class="hero__foot">
+        <p class="hero__lede">A run club, <em class="serif">but more than just running.</em></p>
+        <a href="#about" class="scroll-cue mono" data-cursor="Go">
+          <span>Scroll to start</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 4v16m0 0-6-6m6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ TAPES ============ -->
+    <section class="tapes" aria-label="Who we collect">
+      <div class="tape tape--a"><div class="tape__track">
+        <span>Runners</span><b>✺</b><span>Gym rats</span><b>✺</b><span>Artists</span><b>✺</b><span>Musicians</span><b>✺</b><span>Creators</span><b>✺</b><span>Dreamers</span><b>✺</b><span>Overthinkers</span><b>✺</b><span>Weirdos</span><b>✺</b><span>Niche interests</span><b>✺</b><span>The brainrotted ones</span><b>✺</b>
+      </div></div>
+      <div class="tape tape--b"><div class="tape__track">
+        <span>By niche</span><b>●</b><span>For niche</span><b>●</b><span>To niche</span><b>●</b><span>By niche</span><b>●</b><span>For niche</span><b>●</b><span>To niche</span><b>●</b>
+      </div></div>
+    </section>
+
+    <!-- ============ ABOUT / MANIFESTO ============ -->
+    <section class="about" id="about">
+      <p class="eyebrow mono">[ 00 — Warm up ]</p>
+      <p class="manifesto" data-reveal-words>
+        Young &amp; Freaks is a community built around fitness, art, creativity, healing and human connection — bringing together like-minded people from all across Patiala.
+      </p>
+
+      <div class="about__grid">
+        <div class="about__big">
+          <p>You don't have to <s>fit in</s> here.</p>
+          <p>You just have to be <em class="serif">yourself.</em></p>
+        </div>
+        <div class="about__copy">
+          <p>From runs and movement to creative sessions, conversations, shared experiences and spaces to simply breathe — Young &amp; Freaks is about becoming healthier while staying curious, expressive, and a little freaky.</p>
+          <ul class="stats mono">
+            <li><strong data-count="3">0</strong><span>Runs done</span></li>
+            <li><strong>1</strong><span>City · Patiala</span></li>
+            <li><strong>∞</strong><span>Weirdos welcome</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ THE ROUTE (horizontal) ============ -->
+    <section class="route" id="route">
+      <div class="route__pin">
+        <div class="route__head">
+          <p class="eyebrow mono">[ 01 — The route ]</p>
+          <h2 class="h2">Five checkpoints.<br /><em class="serif">No finish line.</em></h2>
+        </div>
+
+        <div class="route__track">
+          <div class="route__line"><span class="route__progress"></span></div>
+          <div class="route__cards">
+            <article class="km" data-tilt>
+              <span class="km__no mono">KM 01</span>
+              <h3>Find your<br />people.</h3>
+              <p>The runners, the painters, the ones who talk too much at 6am. They're here.</p>
+              <span class="km__glyph" aria-hidden="true">☺</span>
+            </article>
+            <article class="km km--yellow" data-tilt>
+              <span class="km__no mono">KM 02</span>
+              <h3>Move your<br />body.</h3>
+              <p>Runs, walks, stretches, whatever pace you've got. Nobody gets left behind.</p>
+              <span class="km__glyph" aria-hidden="true">↻</span>
+            </article>
+            <article class="km km--pink" data-tilt>
+              <span class="km__no mono">KM 03</span>
+              <h3>Create<br />something.</h3>
+              <p>Clay dates, sketches, playlists, bad poems. Make a thing, then show it off.</p>
+              <span class="km__glyph" aria-hidden="true">✎</span>
+            </article>
+            <article class="km" data-tilt>
+              <span class="km__no mono">KM 04</span>
+              <h3>Heal a<br />little.</h3>
+              <p>Real conversations and spaces to simply breathe. Slower than your mind wants.</p>
+              <span class="km__glyph" aria-hidden="true">∿</span>
+            </article>
+            <article class="km km--cream" data-tilt>
+              <span class="km__no mono">KM 05</span>
+              <h3>Be weird<br />together.</h3>
+              <p>Curious, expressive, a little freaky. Healthier, but never boring.</p>
+              <span class="km__glyph" aria-hidden="true">✺</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RUNS: race bibs ============ -->
+    <section class="runs" id="runs">
+      <div class="runs__head">
+        <p class="eyebrow mono">[ 02 — Race log ]</p>
+        <h2 class="h2">Three runs in.<br /><em class="serif">Pin on your bib.</em></h2>
+      </div>
+
+      <!-- Edit run details here. Each .bib is one run. -->
+      <div class="bibs">
+        <article class="bib" data-tilt>
+          <span class="bib__pin bib__pin--tl"></span><span class="bib__pin bib__pin--tr"></span>
+          <span class="bib__pin bib__pin--bl"></span><span class="bib__pin bib__pin--br"></span>
+          <header class="bib__top mono"><span>Young &amp; Freaks</span><span>Patiala</span></header>
+          <p class="bib__no">001</p>
+          <p class="bib__name">The first one</p>
+          <footer class="bib__foot mono"><span>Where it all started</span><span>✓ Finished</span></footer>
+        </article>
+
+        <article class="bib bib--pink" data-tilt>
+          <span class="bib__pin bib__pin--tl"></span><span class="bib__pin bib__pin--tr"></span>
+          <span class="bib__pin bib__pin--bl"></span><span class="bib__pin bib__pin--br"></span>
+          <header class="bib__top mono"><span>Young &amp; Freaks</span><span>Patiala</span></header>
+          <p class="bib__no">002</p>
+          <p class="bib__name">Round two</p>
+          <footer class="bib__foot mono"><span>The freaks came back</span><span>✓ Finished</span></footer>
+        </article>
+
+        <article class="bib bib--yellow" data-tilt>
+          <span class="bib__pin bib__pin--tl"></span><span class="bib__pin bib__pin--tr"></span>
+          <span class="bib__pin bib__pin--bl"></span><span class="bib__pin bib__pin--br"></span>
+          <header class="bib__top mono"><span>Sept 27 · Sunday</span><span>Patiala</span></header>
+          <p class="bib__no">003</p>
+          <p class="bib__name">Run &amp; Clay Date</p>
+          <footer class="bib__foot mono"><span>From Casa Del Sole · lemonade &amp; coffee shots mid-run</span><span>✓ Finished</span></footer>
+        </article>
+      </div>
+
+      <!-- Photo strip: scroll-driven film -->
+      <div class="film" aria-label="Photos from the runs">
+        <div class="film__row">
+          <figure><img src="assets/runs/DdozdpVS87z.jpg" alt="The club running down a tree-lined road" loading="lazy" /></figure>
+          <figure><img src="assets/runs/Ddn9eM3Mc3y.jpg" alt="Run 003 poster: Run and Clay Date, Patiala" loading="lazy" /></figure>
+          <figure><img src="assets/runs/DdiyuYcSNuf.jpg" alt="A sign reading I am a fitness freak" loading="lazy" /></figure>
+          <figure><img src="assets/runs/DdtojAkJeuy.jpg" alt="We don't wait for the moment, we create it" loading="lazy" /></figure>
+          <figure><img src="assets/runs/DduVAlTzmoh.jpg" alt="Patiala's GenZ meeting up for the run" loading="lazy" /></figure>
+          <figure><img src="assets/runs/Ddkr6-8Iyo-.jpg" alt="How's your little run club going?" loading="lazy" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REELS: 3D ring ============ -->
+    <section class="reels" id="reels">
+      <div class="reels__head">
+        <p class="eyebrow mono">[ 03 — Replays ]</p>
+        <h2 class="h2">Watch the <em class="serif">tapes.</em></h2>
+        <p class="reels__hint mono">Drag to spin · tap to watch on Instagram</p>
+      </div>
+
+      <div class="ring" id="ring">
+        <div class="ring__stage" id="ringStage">
+          <!-- Add or swap reels here: href = Instagram link, img = thumbnail in assets/runs -->
+          <a class="reel" href="https://www.instagram.com/reel/DdozdpVS87z/" target="_blank" rel="noopener">
+            <img src="assets/runs/DdozdpVS87z.jpg" alt="" draggable="false" /><span class="reel__cap">How's the joshhh 🔥</span>
+          </a>
+          <a class="reel" href="https://www.instagram.com/reel/Ddkr6-8Iyo-/" target="_blank" rel="noopener">
+            <img src="assets/runs/Ddkr6-8Iyo-.jpg" alt="" draggable="false" /><span class="reel__cap">Run 003 🗣️</span>
+          </a>
+          <a class="reel" href="https://www.instagram.com/reel/DdtojAkJeuy/" target="_blank" rel="noopener">
+            <img src="assets/runs/DdtojAkJeuy.jpg" alt="" draggable="false" /><span class="reel__cap">Stop bedrotting</span>
+          </a>
+          <a class="reel" href="https://www.instagram.com/reel/DduVAlTzmoh/" target="_blank" rel="noopener">
+            <img src="assets/runs/DduVAlTzmoh.jpg" alt="" draggable="false" /><span class="reel__cap">POV: Patiala's GenZ</span>
+          </a>
+          <a class="reel" href="https://www.instagram.com/reel/DdiyuYcSNuf/" target="_blank" rel="noopener">
+            <img src="assets/runs/DdiyuYcSNuf.jpg" alt="" draggable="false" /><span class="reel__cap">Just fine 🏃‍♀️</span>
+          </a>
+          <a class="reel" href="https://www.instagram.com/p/Ddn9eM3Mc3y/" target="_blank" rel="noopener">
+            <img src="assets/runs/Ddn9eM3Mc3y.jpg" alt="" draggable="false" /><span class="reel__cap">We live, we love, we laugh</span>
+          </a>
+        </div>
+        <div class="ring__floor" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ============ WHAT HAPPENS ============ -->
+    <section class="doing">
+      <p class="eyebrow mono">[ 04 — What happens here ]</p>
+      <ul class="doing__list">
+        <li data-img="assets/runs/DdozdpVS87z.jpg"><span class="mono">01</span><strong>Runs &amp; movement</strong><em class="serif">every pace</em></li>
+        <li data-img="assets/runs/Ddn9eM3Mc3y.jpg"><span class="mono">02</span><strong>Creative sessions</strong><em class="serif">clay, paint, sound</em></li>
+        <li data-img="assets/runs/DduVAlTzmoh.jpg"><span class="mono">03</span><strong>Conversations</strong><em class="serif">the real kind</em></li>
+        <li data-img="assets/runs/DdtojAkJeuy.jpg"><span class="mono">04</span><strong>Shared experiences</strong><em class="serif">lemonade mid-run</em></li>
+        <li data-img="assets/runs/DdiyuYcSNuf.jpg"><span class="mono">05</span><strong>Space to breathe</strong><em class="serif">no pressure</em></li>
+      </ul>
+      <div class="doing__peek" aria-hidden="true"><img alt="" /></div>
+    </section>
+
+    <!-- ============ BOX / CTA ============ -->
+    <section class="box" id="join">
+      <div class="box__pin">
+        <div class="cube" aria-hidden="true">
+          <div class="cube__face cube__face--f">Fit in</div>
+          <div class="cube__face cube__face--b">Normal</div>
+          <div class="cube__face cube__face--l">Rules</div>
+          <div class="cube__face cube__face--r">Boring</div>
+          <div class="cube__face cube__face--t">Same</div>
+          <div class="cube__face cube__face--d">Box</div>
+        </div>
+        <h2 class="box__title">For people who <em class="serif">don't really</em> fit into boxes.</h2>
+        <a class="btn btn--big" href="https://www.instagram.com/youngxfreaks/" target="_blank" rel="noopener" data-cursor="Let's go">
+          Run with us <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="foot">
+    <div class="foot__top">
+      <div class="foot__brand">
+        <img src="assets/logo.jpg" alt="Young & Freaks logo" width="72" height="72" />
+        <p>Find your people. Move your body. Create something. Heal a little. <em class="serif">Be weird together.</em></p>
+      </div>
+      <div class="foot__links mono">
+        <a href="https://www.instagram.com/youngxfreaks/" target="_blank" rel="noopener">Instagram ↗</a>
+        <a href="#runs">Race log</a>
+        <a href="#reels">Replays</a>
+        <a href="#top">Back to start ↑</a>
+      </div>
+    </div>
+    <p class="foot__word" aria-hidden="true">YOUNG&amp;FREAKS</p>
+    <div class="foot__bar mono"><span>© <span id="year"></span> Young &amp; Freaks</span><span>Made in Patiala</span><span>@youngxfreaks</span></div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/track.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
