@@ -38,9 +38,10 @@
       <a href="#about">About</a>
       <a href="#route">The Route</a>
       <a href="#runs">Runs</a>
+      <a href="#register">Register</a>
       <a href="#reels">Reels</a>
     </nav>
-    <a class="btn btn--pill" href="https://www.instagram.com/youngxfreaks/" target="_blank" rel="noopener" data-cursor="DM us">Join the run <span aria-hidden="true">↗</span></a>
+    <a class="btn btn--pill" href="#register" data-cursor="Sign up">Run <span data-run>005</span> <span aria-hidden="true">→</span></a>
   </header>
 
   <main id="top">
@@ -55,7 +56,7 @@
       </div>
       <div class="hero__meta hero__meta--tr mono">
         <span>Run club / art club / weird club</span>
-        <span class="live"><i></i> 3 runs down · next one on IG</span>
+        <span class="live"><i></i> <span data-runs-done>4</span> runs down · Run <span data-run>005</span> next</span>
       </div>
 
       <h1 class="hero__title" aria-label="Young and Freaks">
@@ -98,7 +99,7 @@
         <div class="about__copy">
           <p>From runs and movement to creative sessions, conversations, shared experiences and spaces to simply breathe — Young &amp; Freaks is about becoming healthier while staying curious, expressive, and a little freaky.</p>
           <ul class="stats mono">
-            <li><strong data-count="3">0</strong><span>Runs done</span></li>
+            <li><strong data-count="4" data-runs-done>4</strong><span>Runs done</span></li>
             <li><strong>1</strong><span>City · Patiala</span></li>
             <li><strong>∞</strong><span>Weirdos welcome</span></li>
           </ul>
@@ -156,7 +157,7 @@
     <section class="runs" id="runs">
       <div class="runs__head">
         <p class="eyebrow mono">[ 02 — Race log ]</p>
-        <h2 class="h2">Three runs in.<br /><em class="serif">Pin on your bib.</em></h2>
+        <h2 class="h2">Four runs in.<br /><em class="serif">Pin on your bib.</em></h2>
       </div>
 
       <!-- Edit run details here. Each .bib is one run. -->
@@ -187,11 +188,34 @@
           <p class="bib__name">Run &amp; Clay Date</p>
           <footer class="bib__foot mono"><span>From Casa Del Sole · lemonade &amp; coffee shots mid-run</span><span>✓ Finished</span></footer>
         </article>
+
+        <article class="bib bib--red" data-tilt>
+          <span class="bib__pin bib__pin--tl"></span><span class="bib__pin bib__pin--tr"></span>
+          <span class="bib__pin bib__pin--bl"></span><span class="bib__pin bib__pin--br"></span>
+          <header class="bib__top mono"><span>Oct 04 · Sunday</span><span>Patiala</span></header>
+          <p class="bib__no">004</p>
+          <p class="bib__name">Run to Stone Age</p>
+          <footer class="bib__foot mono"><span>Painted stones, push-ups &amp; hard goodbyes</span><span>✓ Finished</span></footer>
+        </article>
+
+        <!-- The next run: number, title and date come from the registration sheet -->
+        <a class="bib bib--next" href="#register" data-tilt data-cursor="Register">
+          <span class="bib__pin bib__pin--tl"></span><span class="bib__pin bib__pin--tr"></span>
+          <span class="bib__pin bib__pin--bl"></span><span class="bib__pin bib__pin--br"></span>
+          <header class="bib__top mono"><span id="nextBibWhen">Date &amp; place TBA</span><span>Patiala</span></header>
+          <p class="bib__no" data-run>005</p>
+          <p class="bib__name" id="nextBibName">Up next</p>
+          <footer class="bib__foot mono"><span data-reg-state>Registrations open soon</span><span>→ Sign up</span></footer>
+        </a>
       </div>
 
       <!-- Photo strip: scroll-driven film -->
       <div class="film" aria-label="Photos from the runs">
         <div class="film__row">
+          <figure><img src="assets/runs/Dd6d8k2PV8B.jpg" alt="Run 004 poster: Run to Stone Age, October 4, Sunday" loading="lazy" /></figure>
+          <figure><img src="assets/runs/DeEBTZiGgkr.jpg" alt="Holding up painted stones from Run 004" loading="lazy" /></figure>
+          <figure><img src="assets/runs/DeFBPA0yd0Y.jpg" alt="The whole club doing push-ups together at Run 004" loading="lazy" /></figure>
+          <figure><img src="assets/runs/DeEZQJXpGTd.jpg" alt="Flexing under the Young and Freaks neon sign, Sunday morning Run 004" loading="lazy" /></figure>
           <figure><img src="assets/runs/DdozdpVS87z.jpg" alt="The club running down a tree-lined road" loading="lazy" /></figure>
           <figure><img src="assets/runs/Ddn9eM3Mc3y.jpg" alt="Run 003 poster: Run and Clay Date, Patiala" loading="lazy" /></figure>
           <figure><img src="assets/runs/DdiyuYcSNuf.jpg" alt="A sign reading I am a fitness freak" loading="lazy" /></figure>
@@ -202,10 +226,84 @@
       </div>
     </section>
 
+    <!-- ============ REGISTER (driven by the Google Sheet) ============ -->
+    <section class="reg" id="register">
+      <div class="reg__head">
+        <p class="eyebrow mono">[ 03 — Sign up ]</p>
+        <h2 class="h2">Run <span data-run>005</span>.<br /><em class="serif">Grab your bib.</em></h2>
+        <div class="reg__meta">
+          <p class="reg__state mono" id="regState" data-state="offline"><i></i><span id="regStateText">Registrations open soon</span></p>
+          <p class="reg__title" id="regTitle"></p>
+          <p class="reg__when mono" id="regWhen">Date &amp; place on Instagram</p>
+        </div>
+      </div>
+
+      <div class="reg__card">
+        <div class="reg__tabs" role="tablist">
+          <button class="reg__tab mono" type="button" role="tab" data-panel="panelRegister" aria-selected="true">Register</button>
+          <button class="reg__tab mono" type="button" role="tab" data-panel="panelStatus" aria-selected="false">Check status</button>
+        </div>
+
+        <div class="reg__panel" id="panelRegister" role="tabpanel">
+          <form class="form" id="regForm" novalidate>
+            <p class="form__note" id="regClosedNote" hidden></p>
+            <label class="field field--wide"><span class="mono">Full name</span>
+              <input name="name" type="text" autocomplete="name" maxlength="80" required /></label>
+            <label class="field"><span class="mono">Date of birth</span>
+              <input name="dob" type="date" min="1940-01-01" required /></label>
+            <fieldset class="field">
+              <legend class="mono">Gender</legend>
+              <div class="pills">
+                <label><input type="radio" name="gender" value="Male" /><span>Male</span></label>
+                <label><input type="radio" name="gender" value="Female" /><span>Female</span></label>
+                <label><input type="radio" name="gender" value="Other" /><span>Other</span></label>
+              </div>
+            </fieldset>
+            <label class="field"><span class="mono">Phone number</span>
+              <input name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" pattern="[0-9 ]{10,12}" placeholder="10 digits" required /></label>
+            <label class="field"><span class="mono">Emergency contact</span>
+              <input name="emergency" type="tel" inputmode="numeric" pattern="[0-9 ]{10,12}" placeholder="10 digits" required /></label>
+            <label class="field field--wide"><span class="mono">College</span>
+              <input name="college" type="text" maxlength="120" placeholder="Or “None” / where you work" required /></label>
+            <p class="form__error" id="regError" role="alert" hidden></p>
+            <button class="btn btn--big form__submit" type="submit">Register <span aria-hidden="true">→</span></button>
+          </form>
+
+          <div class="done" id="regDone" hidden>
+            <p class="mono">Run <span id="doneRun">005</span> · You’re on the list, <span id="doneName"></span></p>
+            <p class="done__label mono">Your ID</p>
+            <p class="done__id" id="doneId">0000</p>
+            <p class="done__pw">Your password is your date of birth as <b class="mono">DDMMYYYY</b><br />(e.g. 1 Jan 2001 → <b class="mono">01012001</b>).</p>
+            <p class="done__msg"><em class="serif">Your registration will be confirmed in some time.</em> Screenshot your ID and check back later for confirmation.</p>
+            <div class="done__actions">
+              <button class="btn btn--pill" type="button" id="regToStatus">Check status →</button>
+              <button class="btn btn--ghost mono" type="button" id="regAgain">Register someone else</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="reg__panel" id="panelStatus" role="tabpanel" hidden>
+          <form class="form" id="statusForm" novalidate>
+            <label class="field"><span class="mono">ID</span>
+              <input name="id" type="text" inputmode="numeric" pattern="[0-9]{4,8}" placeholder="e.g. 2203" required /></label>
+            <label class="field"><span class="mono">Password (DOB · DDMMYYYY)</span>
+              <input name="password" type="password" inputmode="numeric" pattern="[0-9]{8}" placeholder="01012001" required /></label>
+            <p class="form__error" id="statusError" role="alert" hidden></p>
+            <button class="btn btn--big form__submit" type="submit">Check status <span aria-hidden="true">→</span></button>
+          </form>
+          <div class="status" id="statusResult" hidden>
+            <p class="mono">Run <span id="statusRun">005</span> · <span id="statusName"></span></p>
+            <p class="status__pill" id="statusPill">Pending</p>
+            <p class="status__msg" id="statusMsg"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ REELS: 3D ring ============ -->
     <section class="reels" id="reels">
       <div class="reels__head">
-        <p class="eyebrow mono">[ 03 — Replays ]</p>
+        <p class="eyebrow mono">[ 04 — Replays ]</p>
         <h2 class="h2">Watch the <em class="serif">tapes.</em></h2>
         <p class="reels__hint mono">Drag to spin · tap to watch on Instagram</p>
       </div>
@@ -213,6 +311,21 @@
       <div class="ring" id="ring">
         <div class="ring__stage" id="ringStage">
           <!-- Add or swap reels here: href = Instagram link, img = thumbnail in assets/runs -->
+          <a class="reel" href="https://www.instagram.com/reel/DeFBPA0yd0Y/" target="_blank" rel="noopener">
+            <img src="assets/runs/DeFBPA0yd0Y.jpg" alt="" draggable="false" /><span class="reel__cap">Run 004 🥺 hard saying goodbyes</span>
+          </a>
+          <a class="reel" href="https://www.instagram.com/reel/DeEZQJXpGTd/" target="_blank" rel="noopener">
+            <img src="assets/runs/DeEZQJXpGTd.jpg" alt="" draggable="false" /><span class="reel__cap">Sunday morning Run 004</span>
+          </a>
+          <a class="reel" href="https://www.instagram.com/reel/DeEtxwEIui0/" target="_blank" rel="noopener">
+            <img src="assets/runs/DeEtxwEIui0.jpg" alt="" draggable="false" /><span class="reel__cap">Patiala is not ready for this</span>
+          </a>
+          <a class="reel" href="https://www.instagram.com/reel/DeEMrsqzzSH/" target="_blank" rel="noopener">
+            <img src="assets/runs/DeEMrsqzzSH.jpg" alt="" draggable="false" /><span class="reel__cap">Ehhhhh! 🎁</span>
+          </a>
+          <a class="reel" href="https://www.instagram.com/reel/Dd8QI8muw1F/" target="_blank" rel="noopener">
+            <img src="assets/runs/Dd8QI8muw1F.jpg" alt="" draggable="false" /><span class="reel__cap">Patiala at 5am‼️</span>
+          </a>
           <a class="reel" href="https://www.instagram.com/reel/DdozdpVS87z/" target="_blank" rel="noopener">
             <img src="assets/runs/DdozdpVS87z.jpg" alt="" draggable="false" /><span class="reel__cap">How's the joshhh 🔥</span>
           </a>
@@ -238,7 +351,7 @@
 
     <!-- ============ WHAT HAPPENS ============ -->
     <section class="doing">
-      <p class="eyebrow mono">[ 04 — What happens here ]</p>
+      <p class="eyebrow mono">[ 05 — What happens here ]</p>
       <ul class="doing__list">
         <li data-img="assets/runs/DdozdpVS87z.jpg"><span class="mono">01</span><strong>Runs &amp; movement</strong><em class="serif">every pace</em></li>
         <li data-img="assets/runs/Ddn9eM3Mc3y.jpg"><span class="mono">02</span><strong>Creative sessions</strong><em class="serif">clay, paint, sound</em></li>
@@ -261,7 +374,7 @@
           <div class="cube__face cube__face--d">Box</div>
         </div>
         <h2 class="box__title">For people who <em class="serif">don't really</em> fit into boxes.</h2>
-        <a class="btn btn--big" href="https://www.instagram.com/youngxfreaks/" target="_blank" rel="noopener" data-cursor="Let's go">
+        <a class="btn btn--big" href="#register" data-cursor="Let's go">
           Run with us <span aria-hidden="true">→</span>
         </a>
       </div>
@@ -278,6 +391,7 @@
       <div class="foot__links mono">
         <a href="https://www.instagram.com/youngxfreaks/" target="_blank" rel="noopener">Instagram ↗</a>
         <a href="#runs">Race log</a>
+        <a href="#register">Register</a>
         <a href="#reels">Replays</a>
         <a href="#top">Back to start ↑</a>
       </div>
@@ -290,6 +404,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/register.js"></script>
   <script src="js/track.js"></script>
   <script src="js/main.js"></script>
 </body>

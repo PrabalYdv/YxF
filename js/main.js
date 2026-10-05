@@ -129,8 +129,9 @@
   /* ---------- counters ---------- */
   $$('[data-count]').forEach((el) => {
     const obj = { v: 0 };
+    el.textContent = '0';
     gsap.to(obj, {
-      v: +el.dataset.count, duration: 1.4, ease: 'power2.out',
+      v: () => +el.dataset.count, duration: 1.4, ease: 'power2.out', // read lazily: the sheet may update the run count
       onUpdate: () => (el.textContent = Math.round(obj.v)),
       scrollTrigger: { trigger: el, start: 'top 90%' },
     });
